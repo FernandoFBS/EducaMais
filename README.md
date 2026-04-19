@@ -1,0 +1,2 @@
+# EducaMais
+O objetivo principal é facilitar o processo de alfabetização inicial, permitindo que os alunos pratiquem a junção de sílabas para a formação de palavras de forma autônoma e dinâmica. O sistema busca complementar ou substituir a estática das letras de papel por uma interface multisensorial (visual ou sonora), acelerando a consolidação da consciência fonológica e aumentando o interesse dos estudantes pelas atividades escolares.
