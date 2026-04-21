@@ -1,0 +1,109 @@
+/* --- RESET BÁSICO --- */
+/* Remove as margens padrão do navegador para termos controle total */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', 'Arial', sans-serif; /* Fontes arredondadas são melhores para crianças */
+}
+
+/* --- CORPO DA PÁGINA (FUNDO) --- */
+body {
+    background-color: #f0f8ff; /* Azul bem clarinho (AliceBlue) */
+    display: flex; /* Transforma o corpo em um container flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Ocupa 100% da altura da tela */
+}
+
+/* --- CONTAINER PRINCIPAL DO JOGO --- */
+#jogo-container {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 600px; /* Não deixa ficar gigante em telas de PC */
+    border-radius: 20px; /* Bordas bem arredondadas */
+    padding: 30px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1); /* Sombreado para dar efeito 3D */
+    text-align: center;
+}
+
+/* --- CABEÇALHO --- */
+header h1 {
+    color: #ff6b6b; /* Vermelho/Coral vibrante */
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #555;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+/* --- ÁREA DA PALAVRA MONTADA (ONDE A CRIANÇA VÊ O RESULTADO) --- */
+#palavra-montada {
+    min-height: 80px;
+    background-color: #e9ecef;
+    border: 3px dashed #ced4da;
+    border-radius: 15px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espaço entre as sílabas formadas */
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2b8a3e; /* Verde escuro */
+}
+
+/* --- ÁREA DOS BOTÕES (AS SÍLABAS EMBARALHADAS) --- */
+#banco-silabas {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os botões quebrem para a linha de baixo se não couberem */
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Esta classe será adicionada aos botões lá no JavaScript no próximo passo */
+.btn-silaba {
+    background-color: #4dabf7; /* Azul chamativo */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 25px;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 6px 0px #3bc9db; /* Bordinha embaixo parecendo um botão físico */
+    transition: transform 0.1s, box-shadow 0.1s; /* Animação suave */
+}
+
+/* Efeito ao clicar no botão */
+.btn-silaba:active {
+    transform: translateY(6px); /* O botão afunda */
+    box-shadow: 0px 0px 0px #3bc9db; /* A sombra some */
+}
+
+/* --- FEEDBACK (OCULTO POR PADRÃO) --- */
+.oculto {
+    display: none !important; /* Esconde o elemento da tela */
+}
+
+#feedback {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #d4edda; /* Fundo verde claro de sucesso */
+    color: #155724;
+}
+
+#feedback button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
